@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Get the OpenAI API key from environment variables
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv('sk-proj-RfcgbsHDIDPjeKTRtoWWT3BlbkFJEBIgCXao6n0dV2CQHUyg')
 
 # Read the HTML file and store its content in a variable
 with open('index.html', 'r') as file:
