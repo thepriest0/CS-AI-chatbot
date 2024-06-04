@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify, render_template_string
 import openai
+import os
 
 app = Flask(__name__)
 
-# Replace 'YOUR_OPENAI_API_KEY' with your actual OpenAI API key
-openai.api_key = 'sk-proj-RfcgbsHDIDPjeKTRtoWWT3BlbkFJEBIgCXao6n0dV2CQHUyg'
+# Get the OpenAI API key from environment variables
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Read the HTML file and store its content in a variable
 with open('index.html', 'r') as file:
